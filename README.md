@@ -13,6 +13,7 @@ The users are going to play with some functions, such as: 
    And,... take a look a histogram 
    
    _____MENU_____________________________________________________________________
+   
 0. Exit                 
 1. List movies          
 2. Add movie
