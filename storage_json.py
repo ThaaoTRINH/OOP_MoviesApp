@@ -1,6 +1,5 @@
 from istorage import IStorage
 import requests
-import movie_storage
 import json
 import statistics
 import random
@@ -12,7 +11,7 @@ class StorageJson(IStorage):
 
     def __init__(self, file_path):
         self.file_path = file_path
-        self.movies = movie_storage.get_data()
+        self.movies = self.get_data()
         self.length = len(self.movies)
 
     @staticmethod
@@ -90,7 +89,7 @@ class StorageJson(IStorage):
                 }
             }
             self.movies.append(movie)
-            movie_storage.save_to_json(self.movies)
+            self.save_to_json(self.movies)
             print(f'Movie {movie_title} successfully added')
 
     def delete_movie(self):
